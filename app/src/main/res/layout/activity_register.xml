@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity"
+    android:padding="20dp"
+    android:background="@drawable/background"
+    >
+
+    <EditText
+        android:id="@+id/editNama"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:hint="Masukkan Nama"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:hint="Masukkan Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:hint="Masukkan Password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editUsername" />
+    <EditText
+        android:id="@+id/editPasswordConf"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:hint="Ketik Ulang Password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editUsername" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:text="Registrasi"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/editPassword" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sudah Punya akun"
+        android:textColor="@color/teal_200" />
+</LinearLayout>
