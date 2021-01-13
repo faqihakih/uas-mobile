@@ -16,6 +16,10 @@ class LoginActivity : AppCompatActivity(), LoginActivitiesContract.View {
         setContentView(R.layout.activity_login)
         isLoggedIn()
         Login()
+
+        buttonRegis.setOnClickListener{
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
     }
     private fun Login(){
         buttonLogin.setOnClickListener{
@@ -52,4 +56,5 @@ class LoginActivity : AppCompatActivity(), LoginActivitiesContract.View {
             startActivity(Intent(this, MainActivity::class.java)).also { finish() }
         }
     }
+
 }
