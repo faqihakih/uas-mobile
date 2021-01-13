@@ -23,13 +23,13 @@ class MainActivity : AppCompatActivity() {
             moveIntent()
 
         }
-        btn_berita.setOnClickListener {
+        btn_wisata.setOnClickListener {
             startActivity(Intent(this,WisataActivity::class.java))
         }
         btn_tentang.setOnClickListener {
             startActivity(Intent(this,TentangActivity::class.java))
         }
-        btn_kalkulator.setOnClickListener {
+        btn_tambah.setOnClickListener {
             startActivity(Intent(this,TambahActivity::class.java))
         }
     }

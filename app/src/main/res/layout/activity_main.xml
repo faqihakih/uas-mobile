@@ -32,7 +32,7 @@
         >
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/btn_berita"
+            android:id="@+id/btn_wisata"
             android:layout_width="80dp"
             android:layout_height="120dp"
             android:layout_rowWeight="1"
@@ -67,7 +67,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/btn_kalkulator"
+            android:id="@+id/btn_tambah"
             android:layout_width="80dp"
             android:layout_height="120dp"
             android:layout_rowWeight="1"
