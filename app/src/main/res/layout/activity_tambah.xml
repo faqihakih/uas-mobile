@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TambahActivity">
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".TambahActivity"
+    android:padding="20dp"
+    android:background="@drawable/background"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/editNamaWisata"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:hint="Masukkan Nama Wisata"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/editLokasi"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:hint="Masukkan Lokasi Wisata"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editDeskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:hint="Masukkan Deskripsi"
+        app:layout_constraintTop_toBottomOf="@+id/editLokasi" />
+
+    <Button
+        android:id="@+id/buttonAddWisata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:text="Tambah Wisata"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/editDeskripsi" />
+
+</LinearLayout>
