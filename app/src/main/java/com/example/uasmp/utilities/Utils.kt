@@ -4,7 +4,7 @@ import android.content.Context
 
 class Utils {
     companion object {
-        var API_ENDPOINT = "https://382f5d5b9922.ngrok.io/"
+        var API_ENDPOINT = "https://22664ebc967f.ngrok.io/"
 
 
         fun getToken(context: Context) : String? {
@@ -25,7 +25,7 @@ class Utils {
             pref.edit().clear().apply()
         }
 
-        fun isValidPassword(password : String) = password.length > 6
+        fun isValidPassword(password : String) = password.length != null
 
     }
 }
