@@ -1,16 +1,15 @@
 package com.example.uasmp.presenters
 
+import com.example.uasmp.contracts.WisataActiviyContract
+import com.example.uasmp.models.Wisata
+import com.example.uasmp.webservice.Api
+import com.example.uasmp.webservice.WrappedListResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import com.example.uasmp.contracts.WisataActivitiesContract
-import com.example.uasmp.models.Wisata
-import com.example.uasmp.utilities.Utils
-import com.example.uasmp.webservice.Api
-import com.example.uasmp.webservice.WrappedListResponse
 
-class WisataActivitiesPresenter(v : WisataActivitiesContract.View?):WisataActivitiesContract.Interaction {
-    private var view : WisataActivitiesContract.View? = v
+class WisataActivityPresenter(v : WisataActiviyContract.View?) : WisataActiviyContract.Interaction {
+    private var view : WisataActiviyContract.View? = v
     private var api = Api.instance()
 
     override fun allUser(token: String) {
@@ -23,13 +22,13 @@ class WisataActivitiesPresenter(v : WisataActivitiesContract.View?):WisataActivi
             }
 
             override fun onResponse(
-                    call: Call<WrappedListResponse<Wisata>>,
-                    response: Response<WrappedListResponse<Wisata>>
+                call: Call<WrappedListResponse<Wisata>>,
+                response: Response<WrappedListResponse<Wisata>>
             ) {
                 if(response.isSuccessful) {
                     val body = response.body()
                     if (body != null && body.status) {
-                        view?.attachToRecycler(body.data)
+                        view?.attachToRecycle(body.data)
                     } else {
                         view?.toast("Something went wrong, try again later")
                     }

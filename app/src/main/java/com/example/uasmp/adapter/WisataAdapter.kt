@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.item_wisata.view.*
 import com.example.uasmp.R
 import com.example.uasmp.models.Wisata
+import kotlinx.android.synthetic.main.item_wisata.view.*
 
 class WisataAdapter(private var data : List<Wisata>, private var context : Context) : RecyclerView.Adapter<WisataAdapter.MyHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
         return MyHolder(LayoutInflater.from(context).inflate(R.layout.item_wisata, parent, false))
     }
 
@@ -26,3 +26,4 @@ class WisataAdapter(private var data : List<Wisata>, private var context : Conte
         }
     }
 }
+

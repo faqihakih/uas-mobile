@@ -4,18 +4,19 @@ import android.content.Context
 
 class Utils {
     companion object {
-        var API_ENDPOINT = "https://22664ebc967f.ngrok.io/"
+        var API_ENDPOINT = "https://eb4ed1235c1c.ngrok.io/"
 
 
         fun getToken(context: Context) : String? {
             val token = context.getSharedPreferences("USER", Context.MODE_PRIVATE)
-            return token?.getString("TOKEN", null)
+            return token?.getString("TOKEN",null)
         }
 
-        fun setToken(context : Context, token: String) {
+        fun setToken(context: Context, token: String, user_id: String) {
             val pref = context.getSharedPreferences("USER", Context.MODE_PRIVATE)
             pref.edit().apply(){
                 putString("TOKEN", token)
+                putString("USER_ID", user_id)
                 apply()
             }
         }
@@ -25,7 +26,8 @@ class Utils {
             pref.edit().clear().apply()
         }
 
-        fun isValidPassword(password : String) = password.length != null
+        fun isValidPassword(password: String) = password != null;
+
 
     }
 }
