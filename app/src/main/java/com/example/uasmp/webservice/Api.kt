@@ -43,6 +43,15 @@ interface APIService {
             @Field("password") password: String? = null
     ): Call<WrappedResponse<User>>
 
+    @FormUrlEncoded
+    @POST("auth/register")
+    fun regis(
+            @Field("name") name: String? = null,
+            @Field("email") email: String? = null,
+            @Field("password") password: String? = null,
+            @Field("conf_password") conf_password: String? = null
+    ): Call<WrappedResponse<User>>
+
     @GET("tourism")
     fun get(@Header("x-access-token") token : String) : Call<WrappedListResponse<Wisata>>
 

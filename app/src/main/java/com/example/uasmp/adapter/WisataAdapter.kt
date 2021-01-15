@@ -1,10 +1,12 @@
 package com.example.uasmp.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uasmp.DetailActivity
 import com.example.uasmp.R
 import com.example.uasmp.models.Wisata
 import kotlinx.android.synthetic.main.item_wisata.view.*
@@ -20,9 +22,12 @@ class WisataAdapter(private var data : List<Wisata>, private var context : Conte
 
     class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(tourism: Wisata, context: Context){
-            itemView.tvName.text = tourism.name
-            itemView.tvLocation.text = tourism.location
+            itemView.tvName.text = "Nama : "+tourism.name
+            itemView.tvLocation.text = "Lokasi : "+tourism.location
             itemView.tvDescription.text = tourism.description
+//            context.startActivity(Intent(context,DetailActivity::class.java).apply {
+//                putExtra("wisata",tourism)
+//            })
         }
     }
 }

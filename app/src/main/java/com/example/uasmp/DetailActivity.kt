@@ -1,29 +1,23 @@
 package com.example.uasmp
 
 import android.os.Bundle
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.uasmp.models.Wisata
 
 class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
-
-//        val image = intent.getParcelableExtra<Image>(WisataActivity.INTENT_PARCELABLE)
-//
-//        val imgSrc = findViewById<ImageView>(R.id._imageDetail)
-//        val imgTitle = findViewById<TextView>(R.id._imageTitle)
-//        val imgDesc = findViewById<TextView>(R.id._imageDesc)
-//
-//        if (image !=null){
-//            imgSrc.setImageResource(image.imageSrc)
-//        }
-//        if (image !=null){
-//            imgTitle.text=image.imageTitle
-//        }
-//        if (image !=null){
-//            imgDesc.text=image.imageDesc
-//        }
+        val user = getUser()
+        val nama = findViewById<TextView>(R.id.tvNamaWisata)
+        val lokasi = findViewById<TextView>(R.id.tvLocationWisata)
+        val keterangan = findViewById<TextView>(R.id.tvDescriptionWisata)
+        user?.let {
+            nama.text=it.name
+            lokasi.text=it.location
+            keterangan.text=it.description
+        }
     }
+    private fun getUser() = intent.getParcelableExtra<Wisata>("wisata")
 }

@@ -20,23 +20,6 @@ class WisataActivity : AppCompatActivity(), WisataActiviyContract.View {
         setContentView(R.layout.activity_wisata)
         checkIsLoggedIn()
         presenter = WisataActivityPresenter(this)
-        Logout()
-        intentCreate()
-    }
-
-    private fun intentCreate(){
-//        btnCreate.setOnClickListener{
-//            startActivity(Intent(this, CreateTourismActivity::class.java)).also { finish() }
-//        }
-    }
-
-    private fun Logout(){
-//        btnLogout.setOnClickListener{
-//            startActivity(Intent(this, LoginActivity::class.java)).also{
-//                finish()
-//                WisataUtils.clearToken(this)
-//            }
-//        }
     }
 
     private fun getData (){
@@ -69,7 +52,6 @@ class WisataActivity : AppCompatActivity(), WisataActiviyContract.View {
 
     private fun checkIsLoggedIn(){
         val token = Utils.getToken(this@WisataActivity)
-        Toast.makeText(this, token, Toast.LENGTH_LONG).show()
         if(token == null || token.equals("UNDEFINED")){
             startActivity(Intent(this@WisataActivity, LoginActivity::class.java).also { finish() })
         }

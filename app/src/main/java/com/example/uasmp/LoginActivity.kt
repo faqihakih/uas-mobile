@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity(), LoginActivityContract.View {
             val email = editEmail.text.toString().trim()
             val pass = editPassword.text.toString().trim()
             if (email.isNotEmpty() && pass.isNotEmpty()){
-                if (pass.length > 5 ){
+                if (pass.length > 3 ){
                     presenter.login(email, pass)
                 }else {
                     toast("Cek password anda")

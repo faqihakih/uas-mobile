@@ -10,9 +10,21 @@ interface LoginActivityContract {
         fun notConnect()
     }
 
+    interface ViewCreate{
+        fun success(message: String?)
+        fun toast(message : String?)
+        fun isLoading(state : Boolean)
+    }
+
     interface Interaction{
         fun validate(id: String, password: String) : Boolean
         fun login(email: String, password: String)
+        fun destroy()
+    }
+
+    interface InteractionPost{
+        fun validate(name: String, email: String, password: String, conf_password: String) : Boolean
+        fun save(name: String, email: String, password: String, conf_password: String)
         fun destroy()
     }
 }
