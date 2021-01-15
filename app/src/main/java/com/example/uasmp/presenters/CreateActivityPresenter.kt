@@ -22,8 +22,8 @@ class CreateActivityPresenter(v: WisataActiviyContract.ViewCreate): WisataActivi
             }
 
             override fun onResponse(
-                call: Call<WrappedResponse<Wisata>>,
-                response: Response<WrappedResponse<Wisata>>
+                    call: Call<WrappedResponse<Wisata>>,
+                    response: Response<WrappedResponse<Wisata>>
             ) {
                 if(response.isSuccessful){
                     val body = response.body()

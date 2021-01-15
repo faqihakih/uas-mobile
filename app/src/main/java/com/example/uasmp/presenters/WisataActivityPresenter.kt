@@ -1,5 +1,6 @@
 package com.example.uasmp.presenters
 
+import android.widget.Toast
 import com.example.uasmp.contracts.WisataActiviyContract
 import com.example.uasmp.models.Wisata
 import com.example.uasmp.webservice.Api
@@ -27,6 +28,7 @@ class WisataActivityPresenter(v : WisataActiviyContract.View?) : WisataActiviyCo
             ) {
                 if(response.isSuccessful) {
                     val body = response.body()
+                    println("response "+ response.body())
                     if (body != null && body.status) {
                         view?.attachToRecycle(body.data)
                     } else {

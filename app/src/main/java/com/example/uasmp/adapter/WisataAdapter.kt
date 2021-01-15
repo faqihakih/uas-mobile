@@ -14,12 +14,12 @@ class WisataAdapter(private var data : List<Wisata>, private var context : Conte
         return MyHolder(LayoutInflater.from(context).inflate(R.layout.item_wisata, parent, false))
     }
 
-    override fun onBindViewHolder(holder: WisataAdapter.MyHolder, position: Int) = holder.bind(data[position])
+    override fun onBindViewHolder(holder: WisataAdapter.MyHolder, position: Int) = holder.bind(data[position],context)
 
     override fun getItemCount() = data.size
 
     class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(tourism: Wisata){
+        fun bind(tourism: Wisata, context: Context){
             itemView.tvName.text = tourism.name
             itemView.tvLocation.text = tourism.location
             itemView.tvDescription.text = tourism.description

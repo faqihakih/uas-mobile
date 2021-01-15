@@ -65,7 +65,7 @@ data class WrappedResponse<T> (
 data class WrappedListResponse<T> (
         @SerializedName("message") var message : String?,
         @SerializedName("status") var status : Boolean,
-        @SerializedName("results") var data : List<T>
+        @SerializedName("data") var data : List<T>
 ) {
     constructor() : this(null, false, listOf())
 }

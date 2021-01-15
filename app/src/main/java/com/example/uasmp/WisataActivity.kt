@@ -69,6 +69,7 @@ class WisataActivity : AppCompatActivity(), WisataActiviyContract.View {
 
     private fun checkIsLoggedIn(){
         val token = Utils.getToken(this@WisataActivity)
+        Toast.makeText(this, token, Toast.LENGTH_LONG).show()
         if(token == null || token.equals("UNDEFINED")){
             startActivity(Intent(this@WisataActivity, LoginActivity::class.java).also { finish() })
         }

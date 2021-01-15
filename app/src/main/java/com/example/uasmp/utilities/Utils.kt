@@ -4,7 +4,7 @@ import android.content.Context
 
 class Utils {
     companion object {
-        var API_ENDPOINT = "https://eb4ed1235c1c.ngrok.io/"
+        var API_ENDPOINT = "https://7cec586d1e90.ngrok.io/"
 
 
         fun getToken(context: Context) : String? {

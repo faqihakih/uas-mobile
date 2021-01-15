@@ -1,5 +1,6 @@
 package com.example.wisataproject.presenters
 
+import android.util.Log
 import com.example.uasmp.contracts.LoginActivityContract
 import com.example.uasmp.models.User
 import com.example.uasmp.utilities.Utils
@@ -41,8 +42,9 @@ class LoginActivityPresenter (v : LoginActivityContract.View?) : LoginActivityCo
                         view?.toast("Selamat datang ${body.data!!.name}")
                         println("body "+ body.data)
                         val token = body.data?.token!!
-                        val id_user = body.data?.user_code!!
+                        val id_user = body.data?.id_user!!
                         view?.success(token, id_user)
+                        Log.d("onResponse: " ,token)
                     }
                 }else{
                     view?.toast("Ada yang tidak beres, coba lagi nanti, atau hubungi admin")
