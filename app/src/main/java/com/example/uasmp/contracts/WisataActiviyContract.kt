@@ -1,6 +1,6 @@
 package com.example.uasmp.contracts
 
-import android.text.Editable
+
 import com.example.uasmp.models.Wisata
 
 interface WisataActiviyContract {
