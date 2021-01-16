@@ -34,6 +34,7 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.2.0'
@@ -46,6 +47,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
+    implementation 'com.google.android.material:material:1.0.0'
     //web service
     implementation "com.squareup.retrofit2:retrofit:2.7.2"
     implementation "com.squareup.retrofit2:converter-gson:2.7.2"

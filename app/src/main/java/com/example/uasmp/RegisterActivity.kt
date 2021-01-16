@@ -16,6 +16,10 @@ class RegisterActivity : AppCompatActivity(), LoginActivityContract.ViewCreate {
         setContentView(R.layout.activity_register)
         presenter = RegisActivityPresenter(this)
         Save()
+
+        formLogin.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
     }
 
     private fun Save(){

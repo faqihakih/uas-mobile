@@ -55,6 +55,9 @@ interface APIService {
     @GET("tourism")
     fun get(@Header("x-access-token") token : String) : Call<WrappedListResponse<Wisata>>
 
+    @GET("tourism/{id}")
+    fun find(@Header("x-access-token") token: String, @Path("id") id: String): Call<WrappedResponse<Wisata>>
+
     @FormUrlEncoded
     @POST("tourism")
     fun createData(

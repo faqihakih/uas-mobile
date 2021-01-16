@@ -25,9 +25,12 @@ class WisataAdapter(private var data : List<Wisata>, private var context : Conte
             itemView.tvName.text = "Nama : "+tourism.name
             itemView.tvLocation.text = "Lokasi : "+tourism.location
             itemView.tvDescription.text = tourism.description
-//            context.startActivity(Intent(context,DetailActivity::class.java).apply {
-//                putExtra("wisata",tourism)
-//            })
+            itemView.setOnClickListener {
+                context.startActivity(Intent(context, DetailActivity::class.java).apply {
+                    putExtra("IS_NEW", false)
+                    putExtra("POST", tourism)
+                })
+            }
         }
     }
 }
