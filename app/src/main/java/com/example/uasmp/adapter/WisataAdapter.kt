@@ -27,8 +27,7 @@ class WisataAdapter(private var data : List<Wisata>, private var context : Conte
             itemView.tvDescription.text = tourism.description
             itemView.setOnClickListener {
                 context.startActivity(Intent(context, DetailActivity::class.java).apply {
-                    putExtra("IS_NEW", false)
-                    putExtra("POST", tourism)
+                    putExtra("wisata", tourism)
                 })
             }
         }

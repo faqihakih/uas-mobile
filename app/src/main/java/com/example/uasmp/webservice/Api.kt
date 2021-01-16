@@ -66,6 +66,23 @@ interface APIService {
             @Field("location") location: String? = null,
             @Field("description") description: String? = null
     ): Call<WrappedResponse<Wisata>>
+
+    @FormUrlEncoded
+    @PUT("tourism/{id}")
+    fun updateData(
+            @Path("id") id: Int,
+            @Header("x-access-token") token: String,
+            @Field("name") name: String? = null,
+            @Field("location") location: String? = null,
+            @Field("description") description: String? = null
+    ) : Call<WrappedResponse<Wisata>>
+
+
+    @DELETE("tourism/{id}")
+    fun deleteData(
+            @Path("id") id: Int,
+            @Header("x-access-token") token : String
+    ) : Call<WrappedResponse<Wisata>>
 }
 data class WrappedResponse<T> (
         @SerializedName("message") var message : String?,
