@@ -8,7 +8,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class RegisActivityPresenter(v: LoginActivityContract.ViewCreate): LoginActivityContract.InteractionPost {
+class RegisterActivityPresenter(v: LoginActivityContract.ViewCreate): LoginActivityContract.InteractionPost {
     private var view : LoginActivityContract.ViewCreate? = v
     private var api = Api.instance()
     override fun validate(name: String, email: String, password: String, conf_password: String): Boolean {

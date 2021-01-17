@@ -5,16 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.uasmp.contracts.LoginActivityContract
-import com.example.uasmp.presenters.RegisActivityPresenter
+import com.example.uasmp.presenters.RegisterActivityPresenter
 import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.activity_tambah.*
 
 class RegisterActivity : AppCompatActivity(), LoginActivityContract.ViewCreate {
-    private var presenter = RegisActivityPresenter(this)
+    private var presenter = RegisterActivityPresenter(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-        presenter = RegisActivityPresenter(this)
+        presenter = RegisterActivityPresenter(this)
         Save()
 
         formLogin.setOnClickListener {

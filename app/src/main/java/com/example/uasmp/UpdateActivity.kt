@@ -52,5 +52,4 @@ class UpdateActivity : AppCompatActivity(), WisataActiviyContract.ViewEdit {
         btnUpdate.isEnabled = !state
     }
 
-
 }
